@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<title>CSS1</title>
+	<style>
+	*{
+		margin: 0px;
+		padding:0px;
+	}
+	li{
+		display: inline-block;
+		list-style: none;
+		float:left;
+		margin:20px 15px;
+	}
+	a {
+  text-decoration: none;
+  color: #fff;
+}
+body{
+	background-color:  #3AC4DC;
+	width: 100%;
+	height: 100%;
+}
+#block li a{
+	width: 80px;
+	height: 80px;
+	background-color:#586DCF;
+	border-radius: 5px;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+}
+#block li a span{
+	display: block;
+	opacity: 0;
+	font: 16.5px Tahoma, sans-serif;
+	-webkit-transform: translate(0, -50%);
+	-webkit-transition: all 0.2s 0.1s ease;
+}
+#block li a i{
+	display: block;
+	font-size: 40px;
+	-webkit-transform: translate(0, 50%);
+  	-webkit-transition: all 0.4s ease;
+}
+#block li a:hover.to_up i
+{
+	-webkit-transform: translate(0,-100%);
+}
+#block li a:hover.to_right i
+{
+	-webkit-transform: translate(75%,50%);
+}
+#block li a:hover.to_down i
+{
+	-webkit-transform: translate(0,200%);
+}
+#block li a:hover.to_left i
+{
+	-webkit-transform: translate(-75%,50%);
+}
+#block li a:hover span
+{
+	opacity: 1;
+}
+#block{
+	display: block;
+	margin: auto;
+}
+#container{
+	background-color:  #5ACEE2;
+	width: 550px;
+	height: 120px;
+	margin: 10% auto;
+			border-radius: 10px;
+}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="block">
+			<li>
+				<a href="#" class="to_up">
+					<i class="fa fa-home"></i>
+          			<span>Home</span>
+      			</a>
+			</li>
+			<li>
+				<a href="#" class="to_left">
+					<i class="fa fa-qrcode"></i>
+         		 	<span>About</span>
+      			</a>	
+			</li>
+			<li>
+				<a href="#" class="to_down">
+					<i class="fa fa-flash"></i>
+          			<span>Work</span>
+      			</a>
+			</li>
+			<li>
+				<a href="#" class="to_right">
+					<i class="fa fa-pencil"></i>
+         		 	<span>Journal</span>
+      			</a>
+		    </li>
+		    <li>
+				<a href="#" class="to_up">
+         			 <i class="fa fa-heart"></i>
+         			 <span>Contact</span>
+       			 </a>
+		    </li>
+		</div>
+	</div>
+</body>
+</html>
